@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderSearchViewController">
+            <connections>
+                <outlet property="OrderSearchButton" destination="aBF-zh-jdJ" id="XP7-nc-gbf"/>
+                <outlet property="OrderSearchTableView" destination="WAd-vg-gGX" id="H1Q-9h-3NI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="WAd-vg-gGX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iaK-eG-z8N"/>
+                        <outlet property="delegate" destination="-1" id="6Si-NA-r6D"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBF-zh-jdJ">
+                    <rect key="frame" x="0.0" y="572" width="375" height="40"/>
+                    <color key="backgroundColor" red="0.32086616280000002" green="0.80084304920000005" blue="0.94188723090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KsF-wX-xGI"/>
+                        <constraint firstAttribute="width" constant="375" id="pMa-iL-PDF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="搜尋訂單">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="OrderSearchButton:" destination="-1" eventType="touchUpInside" id="ktu-Ej-6BM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WAd-vg-gGX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1eq-BD-NTG"/>
+                <constraint firstItem="WAd-vg-gGX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="21I-X2-OAt"/>
+                <constraint firstAttribute="trailing" secondItem="aBF-zh-jdJ" secondAttribute="trailing" id="4y5-WH-uoN"/>
+                <constraint firstAttribute="bottom" secondItem="aBF-zh-jdJ" secondAttribute="bottom" constant="55" id="YbM-7D-dgG"/>
+                <constraint firstAttribute="trailing" secondItem="WAd-vg-gGX" secondAttribute="trailing" id="ksz-fn-OR7"/>
+                <constraint firstItem="aBF-zh-jdJ" firstAttribute="top" secondItem="WAd-vg-gGX" secondAttribute="bottom" constant="17" id="rlT-Vb-e1G"/>
+                <constraint firstItem="aBF-zh-jdJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sxu-xq-j6g"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

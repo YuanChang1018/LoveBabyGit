@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChildDetailViewController">
+            <connections>
+                <outlet property="AddChildButton" destination="eto-ld-RFB" id="lQ5-o7-Nht"/>
+                <outlet property="ChildDetailTableView" destination="VWY-0e-hwe" id="nq9-ME-dEp"/>
+                <outlet property="ChildImageButton" destination="iVc-ec-k1f" id="r6l-rs-ScZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VWY-0e-hwe">
+                    <rect key="frame" x="0.0" y="122" width="375" height="418"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="pqG-Kd-OQp"/>
+                        <outlet property="delegate" destination="-1" id="SW4-O5-bPA"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eto-ld-RFB">
+                    <rect key="frame" x="16" y="574" width="343" height="40"/>
+                    <color key="backgroundColor" red="0.32086616280000002" green="0.80084304920000005" blue="0.94188723090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KdM-7B-pzT"/>
+                    </constraints>
+                    <state key="normal" title="新增">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addChildButton:" destination="-1" eventType="touchUpInside" id="Hgx-41-zU0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVc-ec-k1f">
+                    <rect key="frame" x="127.5" y="76" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="VW4-gR-7sg"/>
+                        <constraint firstAttribute="height" constant="120" id="bRt-dx-MQL"/>
+                    </constraints>
+                    <connections>
+                        <action selector="ChildImageButton:" destination="-1" eventType="touchUpInside" id="xqC-uy-pSF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eto-ld-RFB" firstAttribute="top" secondItem="VWY-0e-hwe" secondAttribute="bottom" constant="34" id="8BG-5F-oHt"/>
+                <constraint firstAttribute="bottom" secondItem="eto-ld-RFB" secondAttribute="bottom" constant="53" id="PNn-LZ-ypa"/>
+                <constraint firstItem="eto-ld-RFB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="UBZ-Pi-jvy"/>
+                <constraint firstItem="VWY-0e-hwe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="122" id="cvZ-sH-817"/>
+                <constraint firstItem="iVc-ec-k1f" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="76" id="gYJ-z4-FSp"/>
+                <constraint firstItem="iVc-ec-k1f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lnx-R6-CB7"/>
+                <constraint firstAttribute="trailing" secondItem="eto-ld-RFB" secondAttribute="trailing" constant="16" id="ryy-y5-uIW"/>
+                <constraint firstItem="VWY-0e-hwe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xmG-eu-n0O"/>
+                <constraint firstAttribute="trailing" secondItem="VWY-0e-hwe" secondAttribute="trailing" id="ykf-9l-Yrc"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

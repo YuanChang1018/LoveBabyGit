@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClassSearchViewController">
+            <connections>
+                <outlet property="ClassSearchTableView" destination="EsT-rb-dmr" id="COf-UO-oy3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EsT-rb-dmr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="580"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="X60-xE-Jgh"/>
+                        <outlet property="delegate" destination="-1" id="WIC-nZ-3vA"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyB-ae-dEC">
+                    <rect key="frame" x="16" y="596" width="343" height="40"/>
+                    <color key="backgroundColor" red="0.32086616280000002" green="0.80084304920000005" blue="0.94188723090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="BRn-72-lqq"/>
+                        <constraint firstAttribute="width" constant="343" id="KdZ-dE-YPa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="搜尋">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="SearchButton:" destination="-1" eventType="touchUpInside" id="inX-m1-16f"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.90097421040000003" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EsT-rb-dmr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5FZ-5b-Ti9"/>
+                <constraint firstItem="wyB-ae-dEC" firstAttribute="top" secondItem="EsT-rb-dmr" secondAttribute="bottom" constant="16" id="ImU-fY-pQp"/>
+                <constraint firstAttribute="trailing" secondItem="wyB-ae-dEC" secondAttribute="trailing" constant="16" id="RJr-zz-eMr"/>
+                <constraint firstItem="wyB-ae-dEC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="SGw-PT-6fe"/>
+                <constraint firstAttribute="trailing" secondItem="EsT-rb-dmr" secondAttribute="trailing" id="Xbi-kt-t6E"/>
+                <constraint firstItem="EsT-rb-dmr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gmh-EI-JWf"/>
+                <constraint firstAttribute="bottom" secondItem="wyB-ae-dEC" secondAttribute="bottom" constant="31" id="ioL-vT-kTZ"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

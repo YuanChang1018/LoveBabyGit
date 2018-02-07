@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderDetailViewController">
+            <connections>
+                <outlet property="CancelOrderButton" destination="gkN-Ab-Y48" id="VUT-JA-Kym"/>
+                <outlet property="OrderDetailTableView" destination="BXl-xh-Dhv" id="kKP-kk-WBJ"/>
+                <outlet property="OrderScrollView" destination="Zoa-FN-49b" id="CFK-BG-5in"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zoa-FN-49b">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jku-ED-hD3">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-xh-Dhv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="825"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="GDW-wj-s5K"/>
+                                        <outlet property="delegate" destination="-1" id="eec-5u-RsI"/>
+                                    </connections>
+                                </tableView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkN-Ab-Y48">
+                                    <rect key="frame" x="0.0" y="900" width="375" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.32086616280000002" green="0.80084304920000005" blue="0.94188723090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="取消訂單">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="CancelOrderButton:" destination="-1" eventType="touchUpInside" id="hlM-yd-6V4"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1100" id="IJR-C1-Ud6"/>
+                                <constraint firstAttribute="width" constant="375" id="dXH-82-MNZ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Jku-ED-hD3" secondAttribute="bottom" constant="-433" id="QLH-kg-kvW"/>
+                        <constraint firstItem="Jku-ED-hD3" firstAttribute="leading" secondItem="Zoa-FN-49b" secondAttribute="leading" id="SeX-tO-qAv"/>
+                        <constraint firstAttribute="trailing" secondItem="Jku-ED-hD3" secondAttribute="trailing" id="o0u-wz-Rbl"/>
+                        <constraint firstItem="Jku-ED-hD3" firstAttribute="top" secondItem="Zoa-FN-49b" secondAttribute="top" id="vFS-TB-Xkb"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Zoa-FN-49b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8TG-Aa-dhD"/>
+                <constraint firstAttribute="bottom" secondItem="Zoa-FN-49b" secondAttribute="bottom" id="QfX-bv-JOP"/>
+                <constraint firstAttribute="trailing" secondItem="Zoa-FN-49b" secondAttribute="trailing" id="T6n-Vl-RCR"/>
+                <constraint firstItem="Zoa-FN-49b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vni-af-NYv"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

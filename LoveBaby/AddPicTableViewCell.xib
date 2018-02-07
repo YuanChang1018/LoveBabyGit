@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AddPicTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxU-uW-azd">
+                        <rect key="frame" x="25" y="18" width="85" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="dff-ax-kR6"/>
+                            <constraint firstAttribute="width" constant="85" id="qKB-fT-K19"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nC-Qv-b7k">
+                        <rect key="frame" x="139" y="18" width="173" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="173" id="2Fr-9X-bnL"/>
+                            <constraint firstAttribute="height" constant="24" id="TsC-lU-xw3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7e-D8-6Qs">
+                        <rect key="frame" x="105" y="8" width="198" height="43"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="198" id="EFB-h1-HAy"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="uWo-x0-BIR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Z7e-D8-6Qs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4XN-pl-G9G"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Z7e-D8-6Qs" secondAttribute="trailing" constant="9" id="GZm-1N-oMg"/>
+                    <constraint firstItem="nxU-uW-azd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HtZ-Ax-5JI"/>
+                    <constraint firstItem="nxU-uW-azd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="ihz-xs-fU4"/>
+                    <constraint firstItem="6nC-Qv-b7k" firstAttribute="leading" secondItem="nxU-uW-azd" secondAttribute="trailing" constant="29" id="jlA-SF-KDp"/>
+                    <constraint firstItem="6nC-Qv-b7k" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="mOh-oo-2Td"/>
+                    <constraint firstItem="Z7e-D8-6Qs" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="mRP-5P-gzh"/>
+                    <constraint firstItem="Z7e-D8-6Qs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="97" id="vfZ-lo-wuG"/>
+                    <constraint firstItem="6nC-Qv-b7k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wNn-Hq-uOe"/>
+                    <constraint firstItem="Z7e-D8-6Qs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="y0u-Rz-1TQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="CellAnsLabel" destination="6nC-Qv-b7k" id="JHb-yl-WoE"/>
+                <outlet property="CellTextView" destination="Z7e-D8-6Qs" id="5pL-Sg-7bu"/>
+                <outlet property="cellQuestionLabel" destination="nxU-uW-azd" id="Feb-Y9-bj4"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

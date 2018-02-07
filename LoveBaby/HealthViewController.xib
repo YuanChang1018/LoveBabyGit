@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HealthViewController">
+            <connections>
+                <outlet property="HealthScrollView" destination="q8d-7g-O81" id="zEg-cE-qsq"/>
+                <outlet property="segmentView" destination="d1L-KF-Th5" id="aFq-mY-zMu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="d1L-KF-Th5">
+                    <rect key="frame" x="16" y="77" width="343" height="29"/>
+                    <segments>
+                        <segment title="體溫"/>
+                        <segment title="體重"/>
+                        <segment title="身高"/>
+                        <segment title="頭圍"/>
+                    </segments>
+                    <connections>
+                        <action selector="changeCurrentPage:" destination="-1" eventType="valueChanged" id="rcq-XB-kVo"/>
+                    </connections>
+                </segmentedControl>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-7g-O81">
+                    <rect key="frame" x="0.0" y="121" width="375" height="546"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Kog-l3-cJY"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="d1L-KF-Th5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="1bH-hM-3eJ"/>
+                <constraint firstItem="d1L-KF-Th5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="MWV-uQ-xwL"/>
+                <constraint firstItem="q8d-7g-O81" firstAttribute="top" secondItem="d1L-KF-Th5" secondAttribute="bottom" constant="16" id="Nrq-o2-zVm"/>
+                <constraint firstAttribute="trailing" secondItem="d1L-KF-Th5" secondAttribute="trailing" constant="16" id="Q4e-Yz-rJb"/>
+                <constraint firstAttribute="bottom" secondItem="q8d-7g-O81" secondAttribute="bottom" id="RA8-ay-8VY"/>
+                <constraint firstItem="q8d-7g-O81" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cpK-2e-9Zm"/>
+                <constraint firstAttribute="trailing" secondItem="q8d-7g-O81" secondAttribute="trailing" id="iz2-rO-9x3"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

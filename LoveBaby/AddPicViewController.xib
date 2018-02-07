@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPicViewController">
+            <connections>
+                <outlet property="PicScrollView" destination="KK4-VF-QgE" id="xeD-1K-yJg"/>
+                <outlet property="PicTableview" destination="hBZ-FL-icY" id="EjW-U9-smJ"/>
+                <outlet property="imageButton" destination="EeP-3h-tIW" id="VUS-te-SNI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KK4-VF-QgE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqa-hv-IVq">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeP-3h-tIW">
+                                    <rect key="frame" x="0.0" y="10" width="375" height="203"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="addpicture"/>
+                                    <connections>
+                                        <action selector="imageButton:" destination="-1" eventType="touchUpInside" id="xCV-vD-mVm"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="hBZ-FL-icY">
+                                    <rect key="frame" x="0.0" y="210" width="375" height="458"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="v0w-i9-xeT"/>
+                                        <outlet property="delegate" destination="-1" id="xrz-VH-D0w"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="375" id="28o-Mk-SV3"/>
+                                <constraint firstAttribute="height" constant="667" id="AbM-Oh-JrT"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Sqa-hv-IVq" firstAttribute="leading" secondItem="KK4-VF-QgE" secondAttribute="leading" id="84W-uX-wXL"/>
+                        <constraint firstItem="Sqa-hv-IVq" firstAttribute="top" secondItem="KK4-VF-QgE" secondAttribute="top" id="TAs-uf-Tiv"/>
+                        <constraint firstAttribute="bottom" secondItem="Sqa-hv-IVq" secondAttribute="bottom" id="ff2-XB-8a0"/>
+                        <constraint firstAttribute="trailing" secondItem="Sqa-hv-IVq" secondAttribute="trailing" id="tGv-Pf-psS"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KK4-VF-QgE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FFe-VF-8Gt"/>
+                <constraint firstAttribute="trailing" secondItem="KK4-VF-QgE" secondAttribute="trailing" id="HGx-fn-Wlh"/>
+                <constraint firstItem="KK4-VF-QgE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uvw-LN-BmS"/>
+                <constraint firstAttribute="bottom" secondItem="KK4-VF-QgE" secondAttribute="bottom" id="dem-p7-mOS"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addpicture" width="128" height="128"/>
+    </resources>
+</document>
